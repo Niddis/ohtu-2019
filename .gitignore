@@ -16,3 +16,10 @@
 /viikko2/Verkkokauppa1/.gradle/
 /viikko2/Verkkokauppa1/.nb-gradle/
 
+/viikko3/nhlreader/build/
+/viikko3/nhlreader/.gradle/
+/viikko3/nhlreader/.nb-gradle/
+
+/viikko3/HelloCucumber/.nb-gradle/
+/viikko3/HelloCucumber/build/
+/viikko3/HelloCucumber/.gradle/
