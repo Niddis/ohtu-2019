@@ -13,10 +13,5 @@ public class Erotus extends Komento {
     public void laske(int arvo) {
         sovellus.miinus(arvo);
     }
-
-    @Override
-    public void peru() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
 }

@@ -9,6 +9,7 @@ public abstract class Komento {
     protected Button nollaa;
     protected Button undo;
     protected Sovelluslogiikka sovellus;
+    protected int edellinenTulos;
     
     public Komento(TextField tuloskentta, TextField syotekentta, Button nollaa, Button undo, Sovelluslogiikka sovellus) {
         this.tuloskentta = tuloskentta;
@@ -18,7 +19,7 @@ public abstract class Komento {
         this.sovellus = sovellus;
     }
     
-    public void suorita(){
+    public void suorita() {
         int arvo = 0;
 
         try {
@@ -26,6 +27,8 @@ public abstract class Komento {
         } catch (Exception e) {
 
         }
+
+        edellinenTulos = sovellus.tulos();
 
         laske(arvo);
 
@@ -39,9 +42,15 @@ public abstract class Komento {
         } else {
             nollaa.disableProperty().set(false);
         }
+
+        undo.disableProperty().set(false);
     }   
     
     public abstract void laske(int arvo);
 
-    public abstract void peru();
+    public void peru() {
+        syotekentta.setText("");
+        tuloskentta.setText("" + edellinenTulos);
+        sovellus.setTulos(edellinenTulos);
+    }
 }
